@@ -7,10 +7,17 @@ interface ChatInterfaceProps {
   onSendMessage: (message: string) => void;
 }
 
+/**
+ * 聊天界面组件
+ * @param messages - 消息数组，包含角色和文本内容
+ * @param onSendMessage - 发送消息的回调函数
+ */
 export default function ChatInterface({ messages, onSendMessage }: ChatInterfaceProps) {
   return (
     <main className="flex flex-col flex-1 border-r">
+      {/* 聊天内容区域 */}
       <div className="flex-1 flex flex-col items-center justify-center p-6 overflow-y-auto">
+        {/* 当没有消息时显示欢迎界面 */}
         {messages.length === 0 ? (
           <div className="text-center space-y-3">
             <img
@@ -30,7 +37,9 @@ export default function ChatInterface({ messages, onSendMessage }: ChatInterface
         )}
       </div>
 
+      {/* 聊天输入组件 */}
       <ChatInput onSend={onSendMessage} />
+      {/* 提示信息 */}
       <p className="text-center text-xs text-gray-400 pb-2">
         Mindtrip 模拟界面示例。请勿输入敏感信息。
       </p>

@@ -127,3 +127,6 @@ temp_files/
 *.tmp
 *.bak
 *.backup
+
+dev/
+dist/

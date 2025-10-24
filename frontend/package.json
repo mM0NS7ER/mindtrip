@@ -6,7 +6,8 @@
   "dependencies": {
     "lucide-react": "^0.546.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@amap/amap-jsapi-types": "^0.0.15"
   },
   "devDependencies": {
     "@types/node": "^20.19.21",
